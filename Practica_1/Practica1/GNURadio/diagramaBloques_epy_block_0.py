@@ -17,6 +17,6 @@ class blk (gr. sync_block ):
 	def work (self , input_items , output_items ):
 		x = input_items [0] # Senial de entrada .
 		y0 = output_items [0] # Senial acumulada
-		#y0 [:] = np. cumsum (x)
-		y0 [:] = len(x)
+		y0 [:] = np. cumsum (x)
+		#y0 [:] = len(x)
 		return len (y0)
