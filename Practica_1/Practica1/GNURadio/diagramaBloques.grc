@@ -28,7 +28,7 @@ options:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [8, 8]
+    coordinate: [16, 12.0]
     rotation: 0
     state: enabled
 
@@ -43,6 +43,69 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [184, 12]
+    rotation: 0
+    state: enabled
+- name: Acumulador
+  id: qtgui_number_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    autoscale: 'False'
+    avg: '0'
+    color1: ("black", "black")
+    color10: ("black", "black")
+    color2: ("black", "black")
+    color3: ("black", "black")
+    color4: ("black", "black")
+    color5: ("black", "black")
+    color6: ("black", "black")
+    color7: ("black", "black")
+    color8: ("black", "black")
+    color9: ("black", "black")
+    comment: ''
+    factor1: '1'
+    factor10: '1'
+    factor2: '1'
+    factor3: '1'
+    factor4: '1'
+    factor5: '1'
+    factor6: '1'
+    factor7: '1'
+    factor8: '1'
+    factor9: '1'
+    graph_type: qtgui.NUM_GRAPH_HORIZ
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    max: '1'
+    min: '-1'
+    name: '""'
+    nconnections: '1'
+    type: float
+    unit1: ''
+    unit10: ''
+    unit2: ''
+    unit3: ''
+    unit4: ''
+    unit5: ''
+    unit6: ''
+    unit7: ''
+    unit8: ''
+    unit9: ''
+    update_time: '0.10'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1192, 308.0]
     rotation: 0
     state: enabled
 - name: Desviacion_Estandar
@@ -107,7 +170,7 @@ blocks:
     bus_structure: null
     coordinate: [528, 484.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: Media
   id: qtgui_number_sink
   parameters:
@@ -170,7 +233,7 @@ blocks:
     bus_structure: null
     coordinate: [528, 100.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: Media_Cuadratica
   id: qtgui_number_sink
   parameters:
@@ -233,7 +296,7 @@ blocks:
     bus_structure: null
     coordinate: [528, 196.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: Potencia_Promedio
   id: qtgui_number_sink
   parameters:
@@ -296,7 +359,7 @@ blocks:
     bus_structure: null
     coordinate: [528, 388.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: RMS
   id: qtgui_number_sink
   parameters:
@@ -359,6 +422,44 @@ blocks:
     bus_structure: null
     coordinate: [528, 292.0]
     rotation: 0
+    state: disabled
+- name: analog_noise_source_x_0
+  id: analog_noise_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    amp: '1'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    noise_type: analog.GR_IMPULSE
+    seed: '0'
+    type: float
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [760, 500.0]
+    rotation: 0
+    state: disabled
+- name: analog_noise_source_x_1
+  id: analog_noise_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    amp: '1'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    noise_type: analog.GR_UNIFORM
+    seed: '0'
+    type: float
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [760, 316.0]
+    rotation: 0
     state: true
 - name: blocks_vector_source_x_0
   id: blocks_vector_source_x
@@ -379,7 +480,70 @@ blocks:
     bus_structure: null
     coordinate: [24, 308.0]
     rotation: 0
-    state: true
+    state: disabled
+- name: diferenciador
+  id: qtgui_number_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    autoscale: 'False'
+    avg: '0'
+    color1: ("black", "black")
+    color10: ("black", "black")
+    color2: ("black", "black")
+    color3: ("black", "black")
+    color4: ("black", "black")
+    color5: ("black", "black")
+    color6: ("black", "black")
+    color7: ("black", "black")
+    color8: ("black", "black")
+    color9: ("black", "black")
+    comment: ''
+    factor1: '1'
+    factor10: '1'
+    factor2: '1'
+    factor3: '1'
+    factor4: '1'
+    factor5: '1'
+    factor6: '1'
+    factor7: '1'
+    factor8: '1'
+    factor9: '1'
+    graph_type: qtgui.NUM_GRAPH_HORIZ
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    max: '1'
+    min: '-1'
+    name: '""'
+    nconnections: '1'
+    type: float
+    unit1: ''
+    unit10: ''
+    unit2: ''
+    unit3: ''
+    unit4: ''
+    unit5: ''
+    unit6: ''
+    unit7: ''
+    unit8: ''
+    unit9: ''
+    update_time: '0.10'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1192, 492.0]
+    rotation: 0
+    state: disabled
 - name: epy_block_0
   id: epy_block
   parameters:
@@ -390,7 +554,7 @@ blocks:
       \ up in GRC\n\t\tin_sig =[ np. float32 ],\n\t\tout_sig =[ np. float32 ]\n\t\
       )\n\tdef work (self , input_items , output_items ):\n\t\tx = input_items [0]\
       \ # Senial de entrada .\n\t\ty0 = output_items [0] # Senial acumulada\n\t\t\
-      y0 [:] = np. cumsum (x)\n\t\treturn len (y)\n"
+      #y0 [:] = np. cumsum (x)\n\t\ty0 [:] = len(x)\n\t\treturn len (y0)\n"
     affinity: ''
     alias: ''
     comment: ''
@@ -402,9 +566,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 24.0]
+    coordinate: [1024, 336.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: epy_block_1
   id: epy_block
   parameters:
@@ -445,7 +609,7 @@ blocks:
     bus_structure: null
     coordinate: [232, 264.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: epy_block_2
   id: epy_block
   parameters:
@@ -458,7 +622,7 @@ blocks:
       \t\tx = input_items [0] # Senial de entrada .\n\t\ty0 = output_items [0] # Senial\
       \ acumulada diferencial\n\t\tN = len (x)\n\t\tdiff = np. cumsum (x) - self .\
       \ acum_anterior\n\t\tself . acum_anterior = diff [N -1]\n\t\ty0 [:] = diff\n\
-      \t\treturn len (y)\n"
+      \t\t# y0 [:] = len(y0)\n\t\treturn len (y0)\n"
     affinity: ''
     alias: ''
     comment: ''
@@ -470,17 +634,21 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [480, 20.0]
+    coordinate: [1024, 520.0]
     rotation: 0
     state: disabled
 
 connections:
+- [analog_noise_source_x_0, '0', epy_block_2, '0']
+- [analog_noise_source_x_1, '0', epy_block_0, '0']
 - [blocks_vector_source_x_0, '0', epy_block_1, '0']
+- [epy_block_0, '0', Acumulador, '0']
 - [epy_block_1, '0', Media, '0']
 - [epy_block_1, '1', Media_Cuadratica, '0']
 - [epy_block_1, '2', RMS, '0']
 - [epy_block_1, '3', Potencia_Promedio, '0']
 - [epy_block_1, '4', Desviacion_Estandar, '0']
+- [epy_block_2, '0', diferenciador, '0']
 
 metadata:
   file_format: 1

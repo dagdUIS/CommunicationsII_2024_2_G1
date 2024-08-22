@@ -23,7 +23,7 @@ if __name__ == '__main__':
 from PyQt5 import Qt
 from gnuradio import qtgui
 import sip
-from gnuradio import blocks
+from gnuradio import analog
 from gnuradio import gr
 from gnuradio.filter import firdes
 from gnuradio.fft import window
@@ -32,7 +32,7 @@ import signal
 from argparse import ArgumentParser
 from gnuradio.eng_arg import eng_float, intx
 from gnuradio import eng_notation
-import diagramaBloques_epy_block_1 as epy_block_1  # embedded python block
+import diagramaBloques_epy_block_0 as epy_block_0  # embedded python block
 
 
 
@@ -79,17 +79,17 @@ class diagramaBloques(gr.top_block, Qt.QWidget):
         ##################################################
         # Blocks
         ##################################################
-        self.epy_block_1 = epy_block_1.blk()
-        self.blocks_vector_source_x_0 = blocks.vector_source_f((1, 2, -1), True, 1, [])
-        self.RMS = qtgui.number_sink(
+        self.epy_block_0 = epy_block_0.blk()
+        self.analog_noise_source_x_1 = analog.noise_source_f(analog.GR_UNIFORM, 1, 0)
+        self.Acumulador = qtgui.number_sink(
             gr.sizeof_float,
             0,
             qtgui.NUM_GRAPH_HORIZ,
             1,
             None # parent
         )
-        self.RMS.set_update_time(0.10)
-        self.RMS.set_title("")
+        self.Acumulador.set_update_time(0.10)
+        self.Acumulador.set_title("")
 
         labels = ['', '', '', '', '',
             '', '', '', '', '']
@@ -101,162 +101,26 @@ class diagramaBloques(gr.top_block, Qt.QWidget):
             1, 1, 1, 1, 1]
 
         for i in range(1):
-            self.RMS.set_min(i, -1)
-            self.RMS.set_max(i, 1)
-            self.RMS.set_color(i, colors[i][0], colors[i][1])
+            self.Acumulador.set_min(i, -1)
+            self.Acumulador.set_max(i, 1)
+            self.Acumulador.set_color(i, colors[i][0], colors[i][1])
             if len(labels[i]) == 0:
-                self.RMS.set_label(i, "Data {0}".format(i))
+                self.Acumulador.set_label(i, "Data {0}".format(i))
             else:
-                self.RMS.set_label(i, labels[i])
-            self.RMS.set_unit(i, units[i])
-            self.RMS.set_factor(i, factor[i])
+                self.Acumulador.set_label(i, labels[i])
+            self.Acumulador.set_unit(i, units[i])
+            self.Acumulador.set_factor(i, factor[i])
 
-        self.RMS.enable_autoscale(False)
-        self._RMS_win = sip.wrapinstance(self.RMS.qwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._RMS_win)
-        self.Potencia_Promedio = qtgui.number_sink(
-            gr.sizeof_float,
-            0,
-            qtgui.NUM_GRAPH_HORIZ,
-            1,
-            None # parent
-        )
-        self.Potencia_Promedio.set_update_time(0.10)
-        self.Potencia_Promedio.set_title("")
-
-        labels = ['', '', '', '', '',
-            '', '', '', '', '']
-        units = ['', '', '', '', '',
-            '', '', '', '', '']
-        colors = [("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"),
-            ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black")]
-        factor = [1, 1, 1, 1, 1,
-            1, 1, 1, 1, 1]
-
-        for i in range(1):
-            self.Potencia_Promedio.set_min(i, -1)
-            self.Potencia_Promedio.set_max(i, 1)
-            self.Potencia_Promedio.set_color(i, colors[i][0], colors[i][1])
-            if len(labels[i]) == 0:
-                self.Potencia_Promedio.set_label(i, "Data {0}".format(i))
-            else:
-                self.Potencia_Promedio.set_label(i, labels[i])
-            self.Potencia_Promedio.set_unit(i, units[i])
-            self.Potencia_Promedio.set_factor(i, factor[i])
-
-        self.Potencia_Promedio.enable_autoscale(False)
-        self._Potencia_Promedio_win = sip.wrapinstance(self.Potencia_Promedio.qwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._Potencia_Promedio_win)
-        self.Media_Cuadratica = qtgui.number_sink(
-            gr.sizeof_float,
-            0,
-            qtgui.NUM_GRAPH_HORIZ,
-            1,
-            None # parent
-        )
-        self.Media_Cuadratica.set_update_time(0.10)
-        self.Media_Cuadratica.set_title("")
-
-        labels = ['', '', '', '', '',
-            '', '', '', '', '']
-        units = ['', '', '', '', '',
-            '', '', '', '', '']
-        colors = [("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"),
-            ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black")]
-        factor = [1, 1, 1, 1, 1,
-            1, 1, 1, 1, 1]
-
-        for i in range(1):
-            self.Media_Cuadratica.set_min(i, -1)
-            self.Media_Cuadratica.set_max(i, 1)
-            self.Media_Cuadratica.set_color(i, colors[i][0], colors[i][1])
-            if len(labels[i]) == 0:
-                self.Media_Cuadratica.set_label(i, "Data {0}".format(i))
-            else:
-                self.Media_Cuadratica.set_label(i, labels[i])
-            self.Media_Cuadratica.set_unit(i, units[i])
-            self.Media_Cuadratica.set_factor(i, factor[i])
-
-        self.Media_Cuadratica.enable_autoscale(False)
-        self._Media_Cuadratica_win = sip.wrapinstance(self.Media_Cuadratica.qwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._Media_Cuadratica_win)
-        self.Media = qtgui.number_sink(
-            gr.sizeof_float,
-            0,
-            qtgui.NUM_GRAPH_HORIZ,
-            1,
-            None # parent
-        )
-        self.Media.set_update_time(0.10)
-        self.Media.set_title("")
-
-        labels = ['', '', '', '', '',
-            '', '', '', '', '']
-        units = ['', '', '', '', '',
-            '', '', '', '', '']
-        colors = [("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"),
-            ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black")]
-        factor = [1, 1, 1, 1, 1,
-            1, 1, 1, 1, 1]
-
-        for i in range(1):
-            self.Media.set_min(i, -1)
-            self.Media.set_max(i, 1)
-            self.Media.set_color(i, colors[i][0], colors[i][1])
-            if len(labels[i]) == 0:
-                self.Media.set_label(i, "Data {0}".format(i))
-            else:
-                self.Media.set_label(i, labels[i])
-            self.Media.set_unit(i, units[i])
-            self.Media.set_factor(i, factor[i])
-
-        self.Media.enable_autoscale(False)
-        self._Media_win = sip.wrapinstance(self.Media.qwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._Media_win)
-        self.Desviacion_Estandar = qtgui.number_sink(
-            gr.sizeof_float,
-            0,
-            qtgui.NUM_GRAPH_HORIZ,
-            1,
-            None # parent
-        )
-        self.Desviacion_Estandar.set_update_time(0.10)
-        self.Desviacion_Estandar.set_title("")
-
-        labels = ['', '', '', '', '',
-            '', '', '', '', '']
-        units = ['', '', '', '', '',
-            '', '', '', '', '']
-        colors = [("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"),
-            ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black")]
-        factor = [1, 1, 1, 1, 1,
-            1, 1, 1, 1, 1]
-
-        for i in range(1):
-            self.Desviacion_Estandar.set_min(i, -1)
-            self.Desviacion_Estandar.set_max(i, 2)
-            self.Desviacion_Estandar.set_color(i, colors[i][0], colors[i][1])
-            if len(labels[i]) == 0:
-                self.Desviacion_Estandar.set_label(i, "Data {0}".format(i))
-            else:
-                self.Desviacion_Estandar.set_label(i, labels[i])
-            self.Desviacion_Estandar.set_unit(i, units[i])
-            self.Desviacion_Estandar.set_factor(i, factor[i])
-
-        self.Desviacion_Estandar.enable_autoscale(False)
-        self._Desviacion_Estandar_win = sip.wrapinstance(self.Desviacion_Estandar.qwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._Desviacion_Estandar_win)
+        self.Acumulador.enable_autoscale(False)
+        self._Acumulador_win = sip.wrapinstance(self.Acumulador.qwidget(), Qt.QWidget)
+        self.top_layout.addWidget(self._Acumulador_win)
 
 
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.blocks_vector_source_x_0, 0), (self.epy_block_1, 0))
-        self.connect((self.epy_block_1, 4), (self.Desviacion_Estandar, 0))
-        self.connect((self.epy_block_1, 0), (self.Media, 0))
-        self.connect((self.epy_block_1, 1), (self.Media_Cuadratica, 0))
-        self.connect((self.epy_block_1, 3), (self.Potencia_Promedio, 0))
-        self.connect((self.epy_block_1, 2), (self.RMS, 0))
+        self.connect((self.analog_noise_source_x_1, 0), (self.epy_block_0, 0))
+        self.connect((self.epy_block_0, 0), (self.Acumulador, 0))
 
 
     def closeEvent(self, event):
