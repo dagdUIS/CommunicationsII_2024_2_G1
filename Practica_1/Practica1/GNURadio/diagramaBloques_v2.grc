@@ -662,7 +662,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [640, 664.0]
+    coordinate: [624, 664.0]
     rotation: 0
     state: disabled
 - name: analog_random_source_x_0
