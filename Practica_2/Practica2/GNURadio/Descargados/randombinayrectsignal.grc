@@ -23,6 +23,7 @@ options:
     sizing_mode: fixed
     thread_safe_setters: ''
     title: Not titled yet
+    window_size: (1000,1000)
   states:
     bus_sink: false
     bus_source: false
@@ -53,7 +54,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [405, 11]
+    coordinate: [408, 16.0]
     rotation: 0
     state: enabled
 - name: Sps
@@ -140,7 +141,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [274, 127]
+    coordinate: [248, 128.0]
     rotation: 0
     state: enabled
 - name: analog_noise_source_x_0
@@ -148,7 +149,7 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    amp: '1'
+    amp: '5'
     comment: ''
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -159,7 +160,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [792, 258]
+    coordinate: [832, 272.0]
     rotation: 0
     state: true
 - name: analog_random_source_x_0
@@ -197,7 +198,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [419, 131]
+    coordinate: [456, 144.0]
     rotation: 0
     state: enabled
 - name: blocks_char_to_float_0
@@ -214,7 +215,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [146, 172]
+    coordinate: [184, 184.0]
     rotation: 0
     state: true
 - name: blocks_complex_to_mag_squared_0
@@ -230,7 +231,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [578, 644]
+    coordinate: [584, 656.0]
     rotation: 0
     state: true
 - name: blocks_multiply_const_vxx_0
@@ -248,7 +249,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [479, 143]
+    coordinate: [560, 144.0]
     rotation: 0
     state: enabled
 - name: blocks_multiply_const_vxx_1
@@ -266,7 +267,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [869, 639]
+    coordinate: [936, 632.0]
     rotation: 0
     state: true
 - name: blocks_null_sink_0
@@ -283,7 +284,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [168, 458]
+    coordinate: [200, 464.0]
     rotation: 0
     state: true
 - name: blocks_stream_to_vector_0
@@ -301,7 +302,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [238, 646]
+    coordinate: [216, 632.0]
     rotation: 0
     state: true
 - name: blocks_throttle_0
@@ -320,7 +321,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [851, 175]
+    coordinate: [920, 192.0]
     rotation: 0
     state: true
 - name: epy_block_0
@@ -347,7 +348,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [729, 646]
+    coordinate: [768, 632.0]
     rotation: 0
     state: true
 - name: fft_vxx_0
@@ -400,7 +401,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [673, 166]
+    coordinate: [704, 176.0]
     rotation: 0
     state: enabled
 - name: note_0
@@ -431,7 +432,7 @@ blocks:
     alpha7: '1.0'
     alpha8: '1.0'
     alpha9: '1.0'
-    autoscale: 'False'
+    autoscale: 'True'
     average: '1.0'
     axislabels: 'True'
     bw: samp_rate
@@ -634,6 +635,7 @@ blocks:
     label7: ''
     label8: ''
     label9: ''
+    legend: 'True'
     maxoutbuf: '0'
     minoutbuf: '0'
     name: '"PSD (Watts/Hz)"'
@@ -664,7 +666,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1069, 584]
+    coordinate: [1168, 580.0]
     rotation: 0
     state: true
 - name: virtual_sink_0_1
@@ -677,7 +679,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [237, 245]
+    coordinate: [280.0, 264]
     rotation: 270
     state: true
 - name: virtual_sink_0_1_0
@@ -690,7 +692,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1008, 261]
+    coordinate: [1064.0, 272]
     rotation: 270
     state: enabled
 - name: virtual_sink_0_1_0_0
@@ -703,7 +705,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [951, 332]
+    coordinate: [992.0, 368]
     rotation: 270
     state: enabled
 - name: virtual_source_0
@@ -711,7 +713,7 @@ blocks:
   parameters:
     alias: ''
     comment: ''
-    stream_id: p4
+    stream_id: p5
   states:
     bus_sink: false
     bus_source: false
@@ -724,7 +726,7 @@ blocks:
   parameters:
     alias: ''
     comment: ''
-    stream_id: p5
+    stream_id: p4
   states:
     bus_sink: false
     bus_source: false
@@ -755,3 +757,4 @@ connections:
 
 metadata:
   file_format: 1
+  grc_version: v3.11.0.0git-810-g1ecb8565
