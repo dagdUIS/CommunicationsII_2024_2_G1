@@ -73,7 +73,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: np.array([1,1,1,1])
+    value: np.array([1,1,1,1,1,1,1,1])
   states:
     bus_sink: false
     bus_source: false
@@ -141,7 +141,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [248, 128.0]
+    coordinate: [496, 112.0]
     rotation: 0
     state: enabled
 - name: analog_noise_source_x_0
@@ -160,7 +160,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [832, 272.0]
+    coordinate: [1080, 256.0]
     rotation: 0
     state: true
 - name: analog_random_source_x_0
@@ -180,9 +180,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [9, 147]
+    coordinate: [232, 256.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: blocks_add_xx_0
   id: blocks_add_xx
   parameters:
@@ -198,7 +198,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [456, 144.0]
+    coordinate: [704, 128.0]
     rotation: 0
     state: enabled
 - name: blocks_char_to_float_0
@@ -215,7 +215,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [184, 184.0]
+    coordinate: [432, 168.0]
     rotation: 0
     state: true
 - name: blocks_complex_to_mag_squared_0
@@ -234,6 +234,28 @@ blocks:
     coordinate: [584, 656.0]
     rotation: 0
     state: true
+- name: blocks_file_source_0
+  id: blocks_file_source
+  parameters:
+    affinity: ''
+    alias: ''
+    begin_tag: pmt.PMT_NIL
+    comment: ''
+    file: /home/comu2_grupoc1/Documentos/CommunicationsII_2024_2_G1/Practica_2/Practica2/GNURadio/Descargados/sonido.wav
+    length: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    offset: '0'
+    repeat: 'True'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [16, 144.0]
+    rotation: 0
+    state: enabled
 - name: blocks_multiply_const_vxx_0
   id: blocks_multiply_const_vxx
   parameters:
@@ -249,7 +271,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [560, 144.0]
+    coordinate: [808, 128.0]
     rotation: 0
     state: enabled
 - name: blocks_multiply_const_vxx_1
@@ -321,9 +343,25 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [920, 192.0]
+    coordinate: [1168, 176.0]
     rotation: 0
     state: true
+- name: blocks_unpack_k_bits_bb_0
+  id: blocks_unpack_k_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '16'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [248, 176.0]
+    rotation: 0
+    state: enabled
 - name: epy_block_0
   id: epy_block
   parameters:
@@ -401,7 +439,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [704, 176.0]
+    coordinate: [952, 160.0]
     rotation: 0
     state: enabled
 - name: note_0
@@ -679,23 +717,10 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [280.0, 264]
+    coordinate: [528.0, 248]
     rotation: 270
     state: true
 - name: virtual_sink_0_1_0
-  id: virtual_sink
-  parameters:
-    alias: ''
-    comment: ''
-    stream_id: p4
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1064.0, 272]
-    rotation: 270
-    state: enabled
-- name: virtual_sink_0_1_0_0
   id: virtual_sink
   parameters:
     alias: ''
@@ -705,7 +730,20 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [992.0, 368]
+    coordinate: [1312.0, 256]
+    rotation: 270
+    state: enabled
+- name: virtual_sink_0_1_0_0
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: p4
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1240.0, 352]
     rotation: 270
     state: enabled
 - name: virtual_source_0
@@ -743,10 +781,12 @@ connections:
 - [blocks_char_to_float_0, '0', blocks_add_xx_0, '1']
 - [blocks_char_to_float_0, '0', virtual_sink_0_1, '0']
 - [blocks_complex_to_mag_squared_0, '0', epy_block_0, '0']
+- [blocks_file_source_0, '0', blocks_unpack_k_bits_bb_0, '0']
 - [blocks_multiply_const_vxx_0, '0', interp_fir_filter_xxx_0, '0']
 - [blocks_multiply_const_vxx_1, '0', qtgui_vector_sink_f_0, '0']
 - [blocks_stream_to_vector_0, '0', fft_vxx_0, '0']
 - [blocks_throttle_0, '0', virtual_sink_0_1_0, '0']
+- [blocks_unpack_k_bits_bb_0, '0', blocks_char_to_float_0, '0']
 - [epy_block_0, '0', blocks_multiply_const_vxx_1, '0']
 - [fft_vxx_0, '0', blocks_complex_to_mag_squared_0, '0']
 - [interp_fir_filter_xxx_0, '0', blocks_throttle_0, '0']
