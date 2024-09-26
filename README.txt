@@ -5,3 +5,8 @@
 22/08/2024 --> Se terminó de comprobar los bloques Acumulador y Diferenciador, se almacenaron los archvios en la rama "P1_Diego", todos los integrantes del grupo de laboratorio realizaron aportes el día de hoy.
 
 29/08/2024 --> Se avanzó un poco respecto al diagrama de bloques para poder realizarlo para su uso enalguna aplicación.
+
+-------------------------------------------------------------------------
+
+26/09/2024
+
