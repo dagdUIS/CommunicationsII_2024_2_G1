@@ -15,3 +15,5 @@ Se creo esta rama "P2_Diego" para almacenar únicamente los archivos de la prác
 Se hace merge de esta rama a la rama "P2_Diego"
 
 >>>>>>> P1_Diego
+
+--> Se realizó el merge, se procede a usar los comandos "git add, git commit -m, git push".
