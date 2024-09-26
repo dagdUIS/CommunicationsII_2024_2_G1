@@ -2,5 +2,8 @@
 Se crea este archivo con el fin de almacenar la definición de algunos conceptos que pueden ser importantes para el uso de Git y GitHub.
 
 ## Upstream branch ## 
-La 'upstream branch' es la rama en el repositorio remoto con la que tu rama local está asociada. Una vez que asocias una rama local con una remota, Git sabe dónde enviar y de dónde obtener los cambios cuando usas git push o git pull sin especificar la rama remota.
+La 'upstream branch' es la rama en el repositorio remoto con la que tu
+rama local está asociada. Una vez que asocias una rama local con una
+remota, Git sabe dónde enviar y de dónde obtener los cambios cuando usas
+git push o git pull sin especificar la rama remota.
 
