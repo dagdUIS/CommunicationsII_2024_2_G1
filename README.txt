@@ -9,4 +9,9 @@
 -------------------------------------------------------------------------
 
 26/09/2024
+<<<<<<< HEAD
 Se creo esta rama "P2_Diego" para almacenar únicamente los archivos de la práctica 2 (Laboratorio 3). Se hizo 'merge' de la rama "P1_Diego" con el fin de traer lo que se ha desarrollado de la práctica 2 a la nueva rama, ya que lo que hasta el momento se ha realizado de la práctica 2 se ha almacenado en la rama "P1_Diego" (En la carpeta 'Practica_2', que será lo que se quiere mover a la nuerva rama "P2_Diego").
+=======
+Se hace merge de esta rama a la rama "P2_Diego"
+
+>>>>>>> P1_Diego
