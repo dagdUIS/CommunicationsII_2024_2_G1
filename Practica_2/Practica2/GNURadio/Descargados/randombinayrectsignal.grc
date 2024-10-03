@@ -241,7 +241,7 @@ blocks:
     alias: ''
     begin_tag: pmt.PMT_NIL
     comment: ''
-    file: /home/comu2_grupoc1/Documentos/CommunicationsII_2024_2_G1/Practica_2/Practica2/GNURadio/Descargados/rana.jpg
+    file: C:\Users\Usuario\Downloads\LAB_COMU\CommunicationsII_2024_2_G1\Practica_2\Practica2\GNURadio\Descargados\rana.jpg
     length: '0'
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -895,4 +895,4 @@ connections:
 
 metadata:
   file_format: 1
-  grc_version: v3.11.0.0git-810-g1ecb8565
+  grc_version: 3.10.10.0
