@@ -23,3 +23,7 @@ Se hace merge de esta rama a la rama "P2_Diego"
 03/10/2024
 Se creo la rama "P3_Darwin" en el PC del laboratorio, para subir los archivos usando la cuenta de GitHub de otro compañero, verificando cambios
 usando el PC del laboratorio y el PC personal de Diego.
+
+12/10/2024
+* Se actualizó "GLOSSARY.txt".
+* Se hace merge de la rama "LAB_3" y se mueven los archivos a la carpeta "Laboratorio_3" que es donde se encontrarán los archivos relacionados a la Práctica 2.
