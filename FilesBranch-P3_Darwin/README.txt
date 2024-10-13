@@ -1,3 +1,8 @@
-12/10/2024
+03/10/2024
+Se creo la rama "P3_Darwin" en el PC del laboratorio, para subir los archivos usando la cuenta de GitHub de otro compañero (Darwin ya que antes era con la cuenta de Diego), se verificaron los cambios usando el PC del laboratorio y el PC personal de Diego.
 
-* Se creo esta rama 'P3_Diego' para los aportes de Diego para esta Práctica 3 (Ya hay archivos del desarrollo de la práctica en la rama 'P3_Darwin').
+10/10/2024
+Se añadieron los archivos de GNU Radio de cada modulación 'OOK', 'BPSK' y 'FSK', al igual que se finalizaba el informe 2.
+
+12/10/2024
+* Se realizó un breve reocrrido por las diferentes remas relacionadas a la Práctica 3, con el fin de mejorar el control de versiones.
