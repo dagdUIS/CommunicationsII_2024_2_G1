@@ -7,6 +7,7 @@ rama local está asociada. Una vez que asocias una rama local con una
 remota, Git sabe dónde enviar y de dónde obtener los cambios cuando usas
 git push o git pull sin especificar la rama remota.
 
+<<<<<<< HEAD
 ## refusing to merge unrelated histories ##
 El error "refusing to merge unrelated histories" ocurre porque Git considera que las ramas que se están intentando fusionar no tienen un historial en común. Esto suele suceder cuando los repositorios se han creado de manera independiente o se han importado de diferentes fuentes.
 
@@ -17,3 +18,5 @@ Para forzar el merge a pesar de los historiales no relacionados, se puede usar e
 Esto le indica a Git que permita la fusión de ramas aunque sus historiales sean diferentes.
 
 Antes de ejecutar este comando, asegúrate de haber hecho un respaldo de tus cambios, ya que forzar el merge podría generar conflictos que necesiten ser resueltos manualmente.
+=======
+>>>>>>> LAB_3

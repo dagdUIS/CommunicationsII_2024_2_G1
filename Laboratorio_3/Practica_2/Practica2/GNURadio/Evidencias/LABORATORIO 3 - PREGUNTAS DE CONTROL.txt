@@ -1,0 +1,21 @@
+LABORATORIO 3 (Máximo 5 páginas de informe):
+
+6. REPUESTAS PREGUNTAS DE CONTROL:
+
+a) Primeramente el bloque 'Add' suma las señales de entrada donde una de ellas ea un vector de tamaño que se definió, luego una imagen y sonido que se convirtieron a Float, donde se suma su respectivo vector junto con el bloque de 'Constant Source' obteniendo en la salida una señal que se multiplicará con una constante de valor 2.
+
+b) El bloque 'Interpolating FIR Filter' crea filtros de respuesta de impulso finito (FIR) que realizan la convolución en el dominio del tiempo.
+	1. Vale SPS porque es el número de Símbolos por Muestraque se usa para interpolar. Dependiendo de la señal de entrada y su empaquetado intrínseco de bits puede mejorar o empeorar la visualización de la PSD.
+	2. Se agrega el bloque ' QT GUI Time Sink', con el fin de visualizar la señal de entrada sin ser interpolada, además de configurar un parámetro del bloque para tener una mejor vista de la señal en p3...
+	3. Para hallar el ancho de banda se puede hacer uso de la formula F_s = R_b * SPS, donde el BW quedaría definido como R_b = F_s / SPS.
+	4. (Creemos que es usando el valor de R_b...)
+c) Cuando se analiza la imagen de cierto modo ya esta establecida la PSD y en el audio presenta variaciones en la frecuecia por ende se ve afectada la PSD.
+
+d) Tiene la función de limitar el flujo de muestras de tal forma que la tasa media no supere a la tasa específica en muestras por segundo, para evitar "saturar" el sistema.
+
+e) (Creemos que es algo de perder la información de la señal, confirmar...)
+
+f) Si coincide ya que se observa que la señal tiende a ininito su BW.
+
+12/10/2024
+Se agrega URL del documento dónde están resueltas las pregutas: https://docs.google.com/document/d/1Gk--ML4yyWlsz9AU1KHWBDx083ZU6N7fCJAKR1RHi7o/edit?usp=sharing 
