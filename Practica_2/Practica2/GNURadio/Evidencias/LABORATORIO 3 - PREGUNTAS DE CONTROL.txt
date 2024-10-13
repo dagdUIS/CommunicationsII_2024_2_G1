@@ -16,3 +16,6 @@ d) Tiene la función de limitar el flujo de muestras de tal forma que la tasa me
 e) (Creemos que es algo de perder la información de la señal, confirmar...)
 
 f) Si coincide ya que se observa que la señal tiende a ininito su BW.
+
+12/10/2024
+Se agrega URL del documento dónde están resueltas las pregutas: https://docs.google.com/document/d/1Gk--ML4yyWlsz9AU1KHWBDx083ZU6N7fCJAKR1RHi7o/edit?usp=sharing 

@@ -19,3 +19,9 @@ Se hace merge de esta rama a la rama "P2_Diego"
 --> Se realizó el merge, se procede a usar los comandos "git add, git commit -m, git push".
 
 --> Se agrega URL de un Documento de Google en el cual se esta trabajando en conjunto para resolver las 'Preguntas de Control' que estan en el documento de la práctica: https://docs.google.com/document/d/1Gk--ML4yyWlsz9AU1KHWBDx083ZU6N7fCJAKR1RHi7o/edit?usp=sharing
+
+12/10/2024
+* Se actualizo el archivo "LABORATORIO 3 - PREGUNTAS DE CONTROL.txt".
+* Se agrega informe a su respectiva carpeta.
+* Se hará el respectivo merge desde la rama 'LAB_3'.
+* Finalmente se realizan los últimos cambios respecto a los archivos que se almacenarán en el repositorio.
